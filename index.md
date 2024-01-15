@@ -11,6 +11,7 @@ latitude: "54.9792653"        # decimal latitude of workshop venue (use https://
 longitude: "-1.6193619"       # decimal longitude of the workshop venue (use https://www.latlong.net)
 humandate: "Jan 30, 2024"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
 humantime: "9:00 - 17:00 UTC"    # human-readable times for the workshop e.g., "9:00 am - 4:30 pm CEST (7:00 am - 2:30 pm UTC)"
+registerLink: "https://workshops.ncl.ac.uk/view/book/modal/51648/" #instert e-booking link here
 startdate: 2024-01-30      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
 enddate: 2024-01-30        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
 instructor: ["Dr.Jannetta Steyn", "Fatih Cigirci"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
@@ -165,6 +166,18 @@ This block displays the date and links to Google Calendar.
   <strong>When:</strong>
   {{page.humandate}}.
   {% include workshop_calendar.html %}
+</p>
+{% endif %}
+
+{% comment %}
+REGISTER
+
+This block displays the link to e-bookings.
+{% endcomment %}
+{% if page.regsiterLink %}
+<p id="register">
+  <strong>Register:</strong>
+  {{page.registerLink}}.
 </p>
 {% endif %}
 
