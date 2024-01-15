@@ -11,14 +11,13 @@ latitude: "54.9792653"        # decimal latitude of workshop venue (use https://
 longitude: "-1.6193619"       # decimal longitude of the workshop venue (use https://www.latlong.net)
 humandate: "Jan 30, 2024"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
 humantime: "9:00 - 17:00 UTC"    # human-readable times for the workshop e.g., "9:00 am - 4:30 pm CEST (7:00 am - 2:30 pm UTC)"
-registerLink: "https://workshops.ncl.ac.uk/view/book/modal/51648/" #instert e-booking link here
 startdate: 2024-01-30      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
 enddate: 2024-01-30        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
 instructor: ["Dr.Jannetta Steyn", "Fatih Cigirci"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
 helper: ["Ruxandra Neatu"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
 email: ["michelle.gilbride@newcastle.ac.uk", "jannetta.steyn@newcastle.ac.uk"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
 collaborative_notes:  # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document (e.g., https://pad.carpentries.org/2015-01-01-euphoria)
-eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
+eventbrite:   "https://workshops.ncl.ac.uk/view/book/modal/51648/"        # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
 ---
 
 {% comment %} See instructions in the comments below for how to edit specific sections of this workshop template. {% endcomment %}
@@ -166,18 +165,6 @@ This block displays the date and links to Google Calendar.
   <strong>When:</strong>
   {{page.humandate}}.
   {% include workshop_calendar.html %}
-</p>
-{% endif %}
-
-{% comment %}
-REGISTER
-
-This block displays the link to e-bookings.
-{% endcomment %}
-{% if page.regsiterLink %}
-<p id="register">
-  <strong>Register:</strong>
-  {{page.registerLink}}.
 </p>
 {% endif %}
 
